@@ -1,11 +1,16 @@
-// import s from './Contact.module.css';
+import s from './Contact.module.css';
 
-const Contact = () => {  
+const Contact = ({id, name, number}) => {  
+    
     return (
         <>
-            <div>
-                <p>Some Contact</p>
-            </div>
+            <li className={s.listItem}>
+                <div>
+                    <p className={s.text}>{name}</p>
+                    <p className={s.text}>{number}</p>
+                </div>
+                <button className={s.delBtn}>Delete</button>
+            </li>
         </>
     )
 } 
