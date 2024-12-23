@@ -1,0 +1,6 @@
+.btnlist{
+    padding: 0;
+    padding-left: 10px;
+    display: flex;
+    gap: 5px;
+}
