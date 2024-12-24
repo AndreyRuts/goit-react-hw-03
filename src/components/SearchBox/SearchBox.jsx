@@ -1,9 +1,10 @@
-// import s from './SearchBox.module.css'
+import s from './SearchBox.module.css'
 
-const SearchBox = () => { 
+const SearchBox = ({searchData, setSearchData}) => { 
     return (
-        <div>
-            <p>SearchBox</p>
+        <div className={s.searchBoxWrapper}>
+            <p>Find contacts by name</p>
+            <input className={s.searchBoxInput} value={searchData} onChange={e => setSearchData(e.target.value)}/>
         </div>
     )
 }
