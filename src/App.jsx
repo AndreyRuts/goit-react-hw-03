@@ -1,13 +1,16 @@
 import ContactForm from './components/ContactForm/ContactForm';
 import SearchBox from './components/SearchBox/SearchBox';
 import ContactList from './components/ContactList/ContactList';
+
+import defaultContactList from '../contact-list.json'
+
 import { useState } from 'react';
-
-
 
 const App = () => { 
 
-    const [searchData, setSearchData] = useState()
+    const [contacts, setContacts] = useState(defaultContactList);
+    const [searchData, setSearchData] = useState("")
+    
 
     return (
         <>
@@ -16,7 +19,7 @@ const App = () => {
             <SearchBox
                 searchData={searchData}
                 setSearchData={setSearchData} />
-            <ContactList />
+            <ContactList contactList={contacts} />
         </>
     );
 };
